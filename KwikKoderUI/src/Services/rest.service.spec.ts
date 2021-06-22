@@ -31,7 +31,7 @@ describe('RestService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });  
-   
+  
     it('getUserStats should return', () =>{
       const userStats = [{username : "A",
         userID: "1",
@@ -48,12 +48,12 @@ describe('RestService', () => {
         expect(req.request.method).toEqual("GET");
         req.flush(userStats);
         httpTestingController.verify();
-     });
+    });
   
   // });
   });
   
- /* describe('#getUserStats', () =>{
+  /* describe('#getUserStats', () =>{
     let expectedURL = `${environment.dev.serverUrl}api/UserStat/all`;
     let expectedStats: StatModel[] = [];
     /*const http = {
