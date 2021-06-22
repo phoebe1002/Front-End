@@ -1,45 +1,3 @@
-
-.pop-menu_container-active {
-    pointer-events: auto;
-}
-
-.pop-menu_container::before {
-    content: '';
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transition: opacity 300ms linear;
-    will-change: opacity;
-}
-
-.pop-menu_container-active::before {
-    opacity: 0.3;
-}
-
-
-.profile-image_container {
-    grid-area: image;
-    margin-right: 0.5rem;
-    border-radius: 50%;
-    height: 4rem;
-    width: 4rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    align-self: center;
-    margin-left: 2rem;
-}
-
-.profile_image {
-    max-width: 4rem;
-}
-
 .toggle-btn {
     background-color: var(--neutral_purple);
     box-shadow: 0 0 0 0.25rem;
@@ -69,18 +27,7 @@
     border-radius: 20px;
 }
 
-.menu-header {
-    background: linear-gradient(to right, #00f7ff, #a318ff);
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas: "greeting greeting" "image details";
-    box-sizing: border-box;
-    width: 100%;
-    align-content: center;
-    color: white;
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
-}
+
 /*pop out menu header*/
 .menu-body { 
     display: grid;
@@ -97,7 +44,6 @@
 .menu_icon:hover{
     cursor: pointer;
 }
-/*pop out list container*/
 
 .nav-item{
     padding: 1em;
@@ -130,3 +76,77 @@
     margin: 6px;
     margin-bottom: 70px;
 }
+
+/*Pop-Out Menu Container*/
+.pop-menu_container-active {
+    pointer-events: auto;
+}
+
+.pop-menu_container::before {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 300ms linear;
+    will-change: opacity;
+}
+
+.pop-menu_container-active::before {
+    opacity: 0.3;
+}
+/* Pop Out Menu Header*/
+
+.menu-header {
+    background: linear-gradient(to right, #00f7ff, #a318ff);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "greeting greeting" "image details";
+    box-sizing: border-box;
+    width: 100%;
+    align-content: center;
+    color: white;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+
+.account-details {
+    grid-area: details;
+    display: flex;
+    flex-flow: column;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+.name_text {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.email_text {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+.profile-image_container {
+    grid-area: image;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    align-self: center;
+    margin-left: 2rem;
+}
+
+.profile_image {
+    max-width: 4rem;
+}
+/* Pop Out Menu Header*/
