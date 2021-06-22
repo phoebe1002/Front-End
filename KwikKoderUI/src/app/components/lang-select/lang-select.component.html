@@ -1,0 +1,8 @@
+<select id="lang-dropdown" class="lang-select" [(ngModel)]="selection"
+(change)='itemSelected($event)' default="Quotes">
+    <option *ngFor="let lang of enumKeys" 
+            [value]="lang">
+            {{langList[lang]}}
+      <!-- {{FileType2LabelMapping[fileType]}} -->
+    </option>
+  </select>

@@ -1,0 +1,22 @@
+mat-tab-group{
+    overflow-x: hidden; /* Hide scrollbars */
+    font-size: 8px;
+    font-family: 'Press Start 2P', cursive;
+}
+mat-tab{
+    color:azure;
+}
+.info{
+    color: white;
+}
+.spacer{
+    width: 100%;
+    height: 150px;
+}
+.profile-head{
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+.profile-head h2 h3 h4{
+    font-family: 'Press Start 2P', cursive;
+}

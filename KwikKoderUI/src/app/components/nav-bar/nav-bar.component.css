@@ -1,0 +1,132 @@
+
+.pop-menu_container-active {
+    pointer-events: auto;
+}
+
+.pop-menu_container::before {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 300ms linear;
+    will-change: opacity;
+}
+
+.pop-menu_container-active::before {
+    opacity: 0.3;
+}
+
+
+.profile-image_container {
+    grid-area: image;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    align-self: center;
+    margin-left: 2rem;
+}
+
+.profile_image {
+    max-width: 4rem;
+}
+
+.toggle-btn {
+    background-color: var(--neutral_purple);
+    box-shadow: 0 0 0 0.25rem;
+    color: rgba(0,0,0,.55);
+    border-color: rgba(0,0,0,.1);
+}
+
+.nav-item a {
+    padding: .5em;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.nav-item{
+    text-align: right;
+    list-style-type: none; 
+    padding-left: 0px;
+}
+
+.color-btn{
+    padding: .5em;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.menu-header {
+    background: linear-gradient(to right, #00f7ff, #a318ff);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "greeting greeting" "image details";
+    box-sizing: border-box;
+    width: 100%;
+    align-content: center;
+    color: white;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+/*pop out menu header*/
+.menu-body { 
+    display: grid;
+    width: 100%;
+}
+
+.menu_icon {
+    position: relative;
+    width: 5%;
+    padding-left: 1em;
+    margin-right: 1rem;
+    color:#fff;
+}
+.menu_icon:hover{
+    cursor: pointer;
+}
+/*pop out list container*/
+
+.nav-item{
+    padding: 1em;
+    margin-right: 1rem;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    cursor: pointer;
+}
+
+.nav-btn{   
+    margin: .2em;
+    border: transparent;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 40px;
+    font-family: 'Press Start 2P', cursive;
+    transition-duration: 0.4s;
+    
+}
+
+.nav-btn:hover{ 
+    color: #bc5efb ;
+}
+
+.log-btn{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    margin: 6px;
+    margin-bottom: 70px;
+}
