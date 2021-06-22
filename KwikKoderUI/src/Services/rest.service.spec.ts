@@ -50,7 +50,6 @@ describe('RestService', () => {
         httpTestingController.verify();
     });
   
-  // });
   });
   
   /* describe('#getUserStats', () =>{
