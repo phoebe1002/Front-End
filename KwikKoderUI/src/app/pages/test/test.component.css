@@ -29,9 +29,17 @@
     width: 100%;
     height: 100%;
 }
+.span-align > span{
+    padding: 3px 0;
 
+}
+.span-align{
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .info-text{
-    margin: 3em;
     color: var(--bright_aqua);
 }
 
