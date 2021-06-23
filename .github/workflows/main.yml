@@ -25,12 +25,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Navigate to Dir
-        run: cd KwikKoderUI
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build:ci
+        run: cd KwikKoderUI && npm run build:ci
       - name: Test
         run: npm run test:ci
       - name: Archive build
