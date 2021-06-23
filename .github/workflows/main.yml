@@ -44,23 +44,20 @@ jobs:
           name: deploy_coverage
           path: KwikKoderUI/coverage
           
-  sonarcloud:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        projectBaseDir: KwikKoderUI
-        # Disabling shallow clone is recommended for improving relevancy of reporting
-        fetch-depth: 0
-        args: >
-          -Dsonar.organization=210503-Reston-KwikKoder
-          -Dsonar.projectKey=210503-Reston-KwikKoder_Front-End
-          -Dsonar.test.inclusions=**/*.spec.ts
-          -Dsonar.ts.tslintconfigpath=tslint.json
-          -Dsonar.javascript.lcov.reportPaths=coverage/Ang-GACD-UI/lcov.info
-          -Dsonar.typescript.exclusions=**/node_modules/**,**/typings.d.ts,**/main.ts,**/environments/environment*.ts, **/*routing.module.ts
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: SonarCloud Scan
+        # You may pin to the exact commit or the version.
+        # uses: SonarSource/sonarcloud-github-action@de2e56b42aa84d0b1c5b622644ac17e505c9a049
+        uses: SonarSource/sonarcloud-github-action@v1.6
+        with:
+          # Set the sonar.projectBaseDir analysis property
+          projectBaseDir: Front-End/KwikKoderUI
+          # Additional arguments to the sonarcloud scanner
+          args: >
+            -Dsonar.organization=my-organization
+            -Dsonar.projectKey=my-projectkey
+            -Dsonar.python.coverage.reportPaths=coverage.xml
+            -Dsonar.sources=lib/
+            -Dsonar.test.exclusions=tests/**
+                -Dsonar.tests=tests/
+                -Dsonar.verbose=true
