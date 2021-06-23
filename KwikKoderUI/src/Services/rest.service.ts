@@ -55,7 +55,6 @@ export class RestService {
     status.subscribe(
       (code) => {console.log("status code:", code);} 
     )
-    //console.log("status code:", status);
   }
 
   postCompetitionResults(test: CompetitionTestResults){
