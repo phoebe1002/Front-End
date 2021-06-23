@@ -54,8 +54,8 @@ jobs:
           projectBaseDir: Front-End/KwikKoderUI
           # Additional arguments to the sonarcloud scanner
           args: >
-            -Dsonar.organization=my-organization
-            -Dsonar.projectKey=my-projectkey
+            -Dsonar.organization=210503-reston-kwikkoder
+            -Dsonar.projectKey=210503-Reston-KwikKoder_Front-End
             -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.sources=lib/
             -Dsonar.test.exclusions=tests/**
